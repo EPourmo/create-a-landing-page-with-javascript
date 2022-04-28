@@ -234,6 +234,37 @@ input[data-error]::after {
     font-size: 0.4em;
     color: red;
 } */
+
+/* ------------- START edit form --------------- */
+/* message error  */
+.msgError {
+  font-size: 10px;
+  color: #ff4e60;
+  display: none;
+}
+
+.validFormContainer {
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+}
+
+.validation-message {
+  height: 90%;
+}
+
+.validation-message h2 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 142.6%;
+  text-align: center;
+  margin-top: 70%;
+}
+
+/* ------------- END edit form --------------- */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -324,7 +355,8 @@ input[data-error]::after {
   transform: rotate(-45deg);
 }
 .btn-submit,
-.btn-signup {
+.btn-signup,
+.btn-close-form {
   background: #fe142f;
   display: block;
   margin: 0 auto;
@@ -464,6 +496,7 @@ input[data-error]::after {
   height: 100%;
   display: block;
   padding: 0;
+  object-fit: cover;
 }
 .copyrights {
   color: #fe142f;
@@ -497,7 +530,7 @@ footer {
     display: none;
   }
   .hero-headline {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     white-space: normal;
   }
   .hero-text {
