@@ -40,7 +40,7 @@ function closeModal() {
   modalbg.style.display = "none";
 }
 
-// function to validate email pattern
+// function to validate email pattern (use of RegEx)
 const validateEmail = (emailInputValue) => {
   const mailformat = /\S+@\S+\.\S+/;
   return mailformat.test(emailInputValue);
