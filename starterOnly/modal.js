@@ -1,4 +1,4 @@
-// navbar toggle
+// navbar toggle (refactorisation)
 document.querySelector(".icon").addEventListener("click", () => {
   const topNav = document.getElementById("myTopnav");
   if (topNav.classList.contains("responsive")) {
