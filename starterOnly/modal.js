@@ -1,11 +1,12 @@
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+// navbar toggle
+document.querySelector(".icon").addEventListener("click", () => {
+  const topNav = document.getElementById("myTopnav");
+  if (topNav.classList.contains("responsive")) {
+    topNav.classList.remove("responsive");
   } else {
-    x.className = "topnav";
+    topNav.classList.add("responsive");
   }
-}
+});
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");

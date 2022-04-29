@@ -14,7 +14,6 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  /* background-image: url("background.png"); */
   font-family: var(--font-default);
   font-size: 18px;
   max-width: 1300px;
@@ -26,27 +25,22 @@ p {
   padding: 0.5vw;
 }
 
-/* img {
-  padding-right: 1rem;
-} */
-
 .topnav {
   overflow: hidden;
   margin: 3.5%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
-/* .header-logo {
-  float: left;
-}
+
 .main-navbar {
-  float: right;
-} */
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+  max-width: 800px;
+}
 
 .topnav a {
-  float: left;
-  display: block;
   color: #000000;
   text-align: center;
   padding: 12px 12px;
@@ -73,41 +67,52 @@ p {
   color: #ff001b;
 }
 
-@media screen and (max-width: 1140px) {
-  .topnav a {
+@media screen and (max-width: 1050px) {
+  .main-wrapper {
+    align-self: baseline;
+    max-width: 260px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: fixed;
+    right: 50px;
+    z-index: 10;
+  }
+
+  .main-navbar {
+    flex-direction: column;
+    background-color: #c4c4c4;
+    border-radius: 20px;
+  }
+
+  .topnav .main-navbar {
     display: none;
   }
-  .topnav a.icon {
-    /* float: right; */
+
+  .topnav .icon {
     display: flex;
-  }
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive .icon {
-    position: absolute;
+    justify-content: center;
+    align-items: center;
     right: 0;
-    top: 0;
+    font-size: 30px;
   }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+
+  .topnav.responsive .main-navbar {
+    display: flex;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .topnav a {
-    display: none;
-  }
-  .topnav a.icon {
-    /* float: right; */
-    display: flex;
-    /* margin-top: -15px; */
+  .header-logo img {
+    max-width: 100px;
   }
 
-  .header-logo img {
-    max-width: 200px;
+  .topnav .icon {
+    font-size: 20px;
+  }
+
+  .main-wrapper {
+    right: 20px;
   }
 }
 
@@ -178,7 +183,7 @@ main {
 }
 
 .content {
-  margin: 20% auto;
+  margin: 5% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -189,6 +194,12 @@ main {
   position: relative;
   color: #fff;
   padding-top: 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .content {
+    margin: 15% auto;
+  }
 }
 
 .modal-body {
@@ -445,7 +456,7 @@ input[data-error]::after {
   font-size: 16px;
 }
 .hero-section {
-  min-height: 93vh;
+  min-height: 650px;
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
